@@ -1,3 +1,12 @@
+---
+
+import { Picture } from 'astro:assets';
+import versa from '../images/versa.png';
+import watchface from '../images/watchface.png';
+import '@fontsource-variable/source-code-pro';
+import '../style.css';
+---
+
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -6,8 +15,6 @@
     <title>Terminal for Fitbit</title>
     <meta name="description" content="Terminal is a Fitbit clock face styled to match a terminal session in a Unix environment.">
     <meta name="keywords" content="Terminal, watchface, watch, clock face, Fitbit, Fitbit Sense, Fitbit Versa 3, Fitbit Versa 2, Fitbit Versa Lite, Fitbit Versa, Fitbit Ionic, Fitbit developers, JD Hartley, jdhartley, jdhrtl">
-    <link href="/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,8 +25,28 @@
     </header>
 
     <div class="fitbit-versa">
-        <img class="fitbit-versa__device" src="/images/versa.png" alt="Photo of Fitbit Versa device">
-        <img class="fitbit-versa__watchface" src="/images/watchface.png" alt="Screenshot of Fitbit clock face">
+		<figure class="fitbit-versa__device">
+			<Picture
+				loading="eager"
+				src={versa}
+				alt="Photo of Fitbit Versa device"
+				width={320}
+				quality={80}
+				formats={['avif', 'webp']}
+				densities={[1.5, 2]}
+			/>
+		</figure>
+
+		<figure class="fitbit-versa__watchface">
+			<Picture
+				src={watchface}
+				alt="Screenshot of Fitbit clock face"
+				width={208}
+				formats={['avif', 'webp']}
+				quality={100}
+				densities={[1.5, 2]}
+			/>
+		</figure>
     </div>
 
     <footer>
