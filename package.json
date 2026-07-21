@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@fontsource-variable/source-code-pro": "^5.2.7",
-    "astro": "^7.0.4"
+    "astro": "^7.1.0"
   }
 }
